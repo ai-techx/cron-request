@@ -12,8 +12,8 @@ import (
 func readConfig() (config.Config, error) {
 	viper.SetConfigName("Config")
 	viper.SetConfigType("yaml")
-	viper.AddConfigPath("/etc/appname/")
-	viper.AddConfigPath("$HOME/.appname")
+	viper.AddConfigPath("/etc/cron-requests/")
+	viper.AddConfigPath("$HOME/.cron-requests")
 	viper.AddConfigPath(".")
 	err := viper.ReadInConfig()
 	if err != nil {
